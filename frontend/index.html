@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecureWipe Pro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>SecureWipe Pro</h1>
+    <nav>
+      <button class="nav-btn" data-view="dashboard">Dashboard</button>
+      <button class="nav-btn" data-view="analysis">Device Analysis</button>
+      <button class="nav-btn" data-view="methods">Wiping Methods</button>
+      <button class="nav-btn" data-view="process">Wiping Process</button>
+      <button class="nav-btn" data-view="standards">Standards</button>
+      <button class="nav-btn" data-view="reports">Reports</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="dashboard" class="view active">
+      <h2>Professional Data Wiping Solution</h2>
+      <p>Secure, compliant, and verifiable data destruction for Android devices.</p>
+      <div class="cards">
+        <div class="card">DoD 5220.22-M (3-pass)</div>
+        <div class="card">NIST SP 800-88 (Clear/Purge)</div>
+        <div class="card">Gutmann (35-pass)</div>
+      </div>
+    </section>
+
+    <section id="analysis" class="view">
+      <h2>Device Analysis</h2>
+      <button id="analyzeBtn">Analyze Device</button>
+      <pre id="deviceInfo"></pre>
+    </section>
+
+    <section id="methods" class="view">
+      <h2>Wiping Methods</h2>
+      <div id="methodsList" class="cards"></div>
+    </section>
+
+    <section id="process" class="view">
+      <h2>Wiping Process</h2>
+      <button id="startWipe">Start Simulation</button>
+      <div class="progress">
+        <div id="progressBar" class="bar" style="width:0%"></div>
+      </div>
+      <pre id="status"></pre>
+    </section>
+
+    <section id="standards" class="view">
+      <h2>Security Standards</h2>
+      <ul>
+        <li>DoD 5220.22-M: 3-pass overwrite with verification</li>
+        <li>NIST SP 800-88: Clear, Purge, Destroy levels</li>
+      </ul>
+    </section>
+
+    <section id="reports" class="view">
+      <h2>Reports</h2>
+      <button id="genReport">Generate Completion Report</button>
+      <pre id="reportOut"></pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
